@@ -4,18 +4,14 @@ title: "[BUG]: "
 labels: "question"
 
 body:
-- type: checkboxes
-  id: preflight
-  attributes:
-    label: 预检查
-    description: 请确认你已经做了下面的全部事项
-    options:
-      - label: 我已阅读 [相关文档](https://github.com/mamoe/mirai/tree/dev/docs)
-        required: true
-      - label: 我已对照 [Releases](https://github.com/mamoe/mirai/releases), 相关问题未在近期更新中解决
-        required: true
-      - label: 我已搜索已有的 [issues](https://github.com/mamoe/mirai/issues) 并没找到相关信息
-        required: true
+- type: markdown
+  value: |
+    感谢你来到这里
+
+    在反馈前, 请确认你已经做了下面这些事情
+    - 对照 [Releases](https://github.com/mamoe/mirai/releases)，相关问题未在近期更新中解决
+    - 搜索了已有的 [issues](https://github.com/mamoe/mirai/issues) 列表中有没相关的信息
+    - 阅读了 [Mirai 的相关文档](https://github.com/mamoe/mirai/tree/dev/docs)
 
 - type: textarea
   id: issue-description
@@ -71,11 +67,8 @@ body:
   id: journal-system
   attributes:
     label: 系统日志
-    description: 请提供全面的相关日志并使用 `~~~` 包括起来. 请不要截图. 如果日志过大, 可以上传文件.
-    placeholder: |
-      ~~~
-      
-      ~~~
+    description: 请提供全面的相关日志. 请不要截图. 如果日志过大, 可以上传文件.
+    render: 'text'
   validations:
     required: true
 
@@ -84,13 +77,10 @@ body:
   attributes:
     label: 网络日志
     description: |
-      请提供全面的网络日志并使用 `~~~` 包括起来. 请不要截图.
+      请提供全面的网络日志. 请不要截图.
       一般网络日志位于 bots/<****>/logs 里
       如果日志过大, 可以上传文件.
-    placeholder: |
-      ~~~
-      
-      ~~~
+    render: text
   validations:
     required: true
 
