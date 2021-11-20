@@ -5,6 +5,7 @@ labels: "question"
 
 body:
 - type: checkboxes
+  id: preflight
   attributes:
     label: 预检查
     description: 请确认你已经做了下面的全部事项
@@ -17,11 +18,13 @@ body:
         required: true
 
 - type: textarea
+  id: issue-description
   attributes:
     label: 问题描述
     description: 在此详细描述你遇到的问题
 
 - type: textarea
+  id: reproduce
   attributes:
     label: 复现
     description: 在这里简略说明如何让这个问题再次发生
@@ -33,6 +36,7 @@ body:
     required: true
 
 - type: input
+  id: version-mirai-core
   attributes:
     label: mirai-core 版本
     description: "填写你正在使用的版本号，如 `2.6.7`"
@@ -41,6 +45,7 @@ body:
     required: true
 
 - type: dropdown
+  id: bot-protocol
   attributes:
     label: bot-protocol
     options:
@@ -53,11 +58,13 @@ body:
     required: true
 
 - type: textarea
+  id: version-others
   attributes:
     label: 其他组件版本
     description: 如果你正在通过 mirai-console 或其他间接使用 mirai-core 的中间件（如 mirai-native、mirai-api-http 或者其他第三方 SDK）, 请同样提供版本号
 
 - type: textarea
+  id: journal-system
   attributes:
     label: 系统日志
     description: 请提供全面的相关日志并使用 `~~~` 包括起来. 请不要截图. 如果日志过大, 可以上传文件.
@@ -69,6 +76,7 @@ body:
     required: true
 
 - type: textarea
+  id: journal-network
   attributes:
     label: 网络日志
     description: |
@@ -83,6 +91,7 @@ body:
     required: true
 
 - type: textarea
+  id: addiction
   attributes:
     label: 补充信息
     description: 如有必要，你可以在下文继续添加其他信息
