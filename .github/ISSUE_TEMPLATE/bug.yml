@@ -68,7 +68,9 @@ body:
   id: journal-system
   attributes:
     label: 系统日志
-    description: 请提供全面的相关日志. 请不要截图. 如果日志过大, 可以上传文件.
+    description: |
+      请提供全面的相关日志. 请不要截图.
+      如果日志过大, 可以在 `补充信息` 上传文件.
     render: 'text'
   validations:
     required: true
@@ -80,7 +82,7 @@ body:
     description: |
       请提供全面的网络日志. 请不要截图.
       一般网络日志位于 bots/<****>/logs 里
-      如果日志过大, 可以上传文件.
+      如果日志过大, 可以在 `补充信息` 上传文件.
     render: text
   validations:
     required: true
