@@ -5,13 +5,14 @@ labels: "question"
 
 body:
 - type: markdown
-  value: |
-    感谢你来到这里
+  attributes:
+    value: |
+      感谢你来到这里
 
-    在反馈前, 请确认你已经做了下面这些事情
-    - 对照 [Releases](https://github.com/mamoe/mirai/releases)，相关问题未在近期更新中解决
-    - 搜索了已有的 [issues](https://github.com/mamoe/mirai/issues) 列表中有没相关的信息
-    - 阅读了 [Mirai 的相关文档](https://github.com/mamoe/mirai/tree/dev/docs)
+      在反馈前, 请确认你已经做了下面这些事情
+      - 对照 [Releases](https://github.com/mamoe/mirai/releases)，相关问题未在近期更新中解决
+      - 搜索了已有的 [issues](https://github.com/mamoe/mirai/issues) 列表中有没相关的信息
+      - 阅读了 [Mirai 的相关文档](https://github.com/mamoe/mirai/tree/dev/docs)
 
 - type: textarea
   id: issue-description
