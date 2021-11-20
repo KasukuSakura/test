@@ -1,0 +1,87 @@
+name: Bug 报告
+description: 提交一个 bug
+title: "[BUG]: "
+labels: "question"
+
+body:
+- type: checkboxes
+  attributes:
+    label: 预检查
+    description: 请确认你已经做了下面的全部事项
+    options:
+      - label: 我已阅读 [相关文档](https://github.com/mamoe/mirai/tree/dev/docs)
+        required: true
+      - label: 我已对照 [Releases](https://github.com/mamoe/mirai/releases), 相关问题未在近期更新中解决
+        required: true
+      - label: 我已搜索已有的 [issues](https://github.com/mamoe/mirai/issues) 并没找到相关信息
+        required: true
+
+- type: textarea
+  attributes:
+    label: 问题描述
+    description: 在此详细描述你遇到的问题
+
+- type: textarea
+  attributes:
+    label: 复现
+    description: 在这里简略说明如何让这个问题再次发生
+    placeholder: |
+      在这里简略说明如何让这个问题再次发生
+      可使用 1.  2.  3.  的列表格式，或其他任意恰当的格式
+      如果你不确定如何复现, 请尽量描述发生当时的情景
+
+- type: input
+  attributes:
+    label: mirai-core 版本
+    description: "填写你正在使用的版本号，如 `2.6.7`"
+    placeholder: 2.8.2
+  validations:
+    required: true
+
+- type: dropdown
+  attributes:
+    label: bot-protocol
+    options:
+      - ANDROID_PHONE
+      - ANDROID_PAD
+      - ANDROID_WATCH
+      - IPAD
+      - MACOS
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: 其他组件版本
+    description: 如果你正在通过 mirai-console 或其他间接使用 mirai-core 的中间件（如 mirai-native、mirai-api-http 或者其他第三方 SDK）, 请同样提供版本号
+
+- type: textarea
+  attributes:
+    label: 系统日志
+    description: 请提供全面的相关日志并使用 `~~~` 包括起来. 请不要截图. 如果日志过大, 可以上传文件.
+    placeholder: |
+      ~~~
+      
+      ~~~
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: 网络日志
+    description: |
+      请提供全面的网络日志并使用 `~~~` 包括起来. 请不要截图.
+      一般网络日志位于 bots/<****>/logs 里
+      如果日志过大, 可以上传文件.
+    placeholder: |
+      ~~~
+      
+      ~~~
+  validations:
+    required: true
+
+- type: textarea
+  attriubtes:
+    label: 补充信息
+    description: 如有必要，你可以在下文继续添加其他信息
+
