@@ -22,6 +22,8 @@ body:
   attributes:
     label: 问题描述
     description: 在此详细描述你遇到的问题
+  validations:
+    required: true
 
 - type: textarea
   id: reproduce
