@@ -5,5 +5,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - env:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: sh checkrun.sh
